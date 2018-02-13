@@ -14,15 +14,12 @@ class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var animalImageView: UIImageView!
     
-    
     @IBOutlet weak var tipoLabel: UILabel!
     @IBOutlet weak var nombreLabel: UILabel!
     @IBOutlet weak var edadLabel: UILabel!
     
-    
     @IBOutlet weak var calcularButton: UIButton!
     @IBOutlet weak var edadHumanaLabel: UILabel!
-    
     
     
     override func awakeFromNib() {
@@ -30,22 +27,12 @@ class TableViewCell: UITableViewCell {
         // Initialization code
     }
     
-    
-    
-    
     @IBAction func calcularAction(_ sender: Any) {
         let edadInt = Int(edadLabel.text!)!
         let edadHumanaInt = edadInt * 7
         let edadHumanaString = String(edadHumanaInt)
         edadHumanaLabel.text = edadHumanaString
         
-        
     }
     
-    
-    
-    
-
-    
-
 }

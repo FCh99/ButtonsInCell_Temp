@@ -53,8 +53,17 @@ class TableViewController: UITableViewController {
         cell.nombreLabel.text = animales[indexPath.row].nombre
         cell.edadLabel.text = String(animales[indexPath.row].edadAnimal)
         
-        // poner el botón en la celda ya estaba puesto por autolayout y no cambia con indexpath
-        // puede ser útil para un futuro: cell.calcularButton.tag = indexPath.row
+        
+        
+        // puede ser útil para customizar el outlet botón a la celda en función del indexpath
+        cell.calcularButton.tag = indexPath.row
+        
+        // si es cero o par poner el botón rojo
+        if cell.calcularButton.tag % 2 == 0 {
+            cell.calcularButton.tintColor = UIColor.red
+        }
+        
+        
         
         return cell
     }
